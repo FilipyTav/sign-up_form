@@ -1,0 +1,87 @@
+:root {
+    --left_image_size: 40vw;
+    --right_form_size: calc(100vw - var(--left_image_size));
+
+    --form_bg_color: rgb(21, 1, 53);
+    --form_text_color: rgb(199, 179, 255);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.img {
+    width: var(--left_image_size);
+    position: relative;
+}
+
+.bg {
+    width: var(--left_image_size);
+    height: 100vh;
+}
+
+.logo_bg {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 20vh;
+    width: var(--left_image_size);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img.logo {
+    height: 100px;
+}
+
+.img p {
+    font-size: clamp(1rem, 10vw, 2rem);
+    color: rgb(6, 6, 83);
+}
+
+.form {
+    width: var(--right_form_size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--form_bg_color);
+}
+
+.form_container {
+    width: calc(var(--right_form_size) - 5vw);
+}
+
+.form_container > * {
+    color: var(--form_text_color);
+    font-size: 1.3rem;
+    margin: 0 20px 30px 20px;
+}
+
+.actual_form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.form_input > label {
+    font-size: 1rem;
+}
+
+.actual_form > p {
+    grid-column: 1 / -1;
+}
+
+.form_input {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 20vw;
+}
