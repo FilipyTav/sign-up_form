@@ -1,9 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&display=swap");
+
 :root {
     --left_image_size: 40vw;
     --right_form_size: calc(100vw - var(--left_image_size));
 
     --form_bg_color: rgb(21, 1, 53);
     --form_text_color: rgb(199, 179, 255);
+
+    --btn_bg_color: rgb(48, 19, 94);
+    --btn_text_color: rgb(247, 245, 242);
 }
 
 * {
@@ -44,8 +49,9 @@ img.logo {
 }
 
 .img p {
-    font-size: clamp(1rem, 10vw, 2rem);
-    color: rgb(6, 6, 83);
+    font-size: clamp(1rem, 10vw, 40px);
+    color: turquoise;
+    font-family: "Cinzel Decorative", cursive, sans-serif;
 }
 
 .form {
@@ -92,6 +98,7 @@ img.logo {
 
 .form input:focus {
     border: 2px solid blue;
+    background: rgb(164, 147, 212);
 }
 
 /* .form_input input:invalid {
@@ -112,8 +119,28 @@ img.logo {
     width: 20vw;
 }
 
-form {
+.form_container form {
     margin: 0;
     padding: 10px 20px;
-    box-shadow: 1px 1px 10px 10px rgb(48, 19, 94);
+    box-shadow: 0 0 10px 10px var(--btn_bg_color);
+    margin-bottom: 30px;
+}
+
+.submit_btn {
+    border-radius: 8px;
+    border: 2px solid var(--btn_text_color);
+    color: var(--btn_text_color);
+    background: var(--form_bg_color);
+    padding: 10px 30px;
+}
+
+.submit_btn:hover {
+    cursor: pointer;
+    color: var(--btn_bg_color);
+    background: var(--btn_text_color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--btn_text_color);
 }
